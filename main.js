@@ -5,6 +5,7 @@ var price = document.getElementsByClassName("price");
 var removeItem = document.getElementsByClassName("removeItem");
 var cartItem = document.getElementsByClassName("cartItem");
 var subTotal = document.getElementById("subTotal");
+var tax = document.getElementById("tax");
 var total = document.getElementById("total");
 var wholeCartBox = document.getElementById("wholeCartBox");
 
@@ -14,6 +15,7 @@ plusBtn[0].addEventListener("click", function() {
     inputBox[0].value = ++inputBox[0].value;
     price[0].innerText = parseFloat(price[0].innerText) + 1219;
     subTotal.innerText = parseFloat(subTotal.innerText) + 1219;
+    tax.innerText = (parseFloat(subTotal.innerText) * 0.03).toFixed(2);
     total.innerText = parseFloat(total.innerText) + 1219;
 });
 
@@ -22,6 +24,7 @@ minusBtn[0].addEventListener("click", function() {
         inputBox[0].value = inputBox[0].value - 1;
         price[0].innerText = parseFloat(price[0].innerText) - 1219;
         subTotal.innerText = parseFloat(subTotal.innerText) - 1219;
+        tax.innerText = (parseFloat(subTotal.innerText) * 0.03).toFixed(2);
         total.innerText = parseFloat(total.innerText) - 1219;
     }
 
@@ -35,6 +38,7 @@ plusBtn[1].addEventListener("click", function() {
     inputBox[1].value = ++inputBox[1].value;
     price[1].innerText = parseFloat(price[1].innerText) + 59;
     subTotal.innerText = parseFloat(subTotal.innerText) + 59;
+    tax.innerText = (parseFloat(subTotal.innerText) * 0.03).toFixed(2);
     total.innerText = parseFloat(total.innerText) + 59;
 });
 
@@ -43,6 +47,7 @@ minusBtn[1].addEventListener("click", function() {
         inputBox[1].value = inputBox[1].value - 1;
         price[1].innerText = parseFloat(price[1].innerText) - 59;
         subTotal.innerText = parseFloat(subTotal.innerText) - 59;
+        tax.innerText = (parseFloat(subTotal.innerText) * 0.03).toFixed(2);
         total.innerText = parseFloat(total.innerText) - 59;
     }
 
